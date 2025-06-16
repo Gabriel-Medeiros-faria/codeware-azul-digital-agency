@@ -7,42 +7,42 @@ const Portfolio = () => {
     {
       title: 'E-commerce Platform',
       description: 'Plataforma completa de e-commerce com sistema de pagamentos, gestão de estoque e analytics.',
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=80',
       tech: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
       category: 'Web Development'
     },
     {
       title: 'Healthcare Mobile App',
       description: 'Aplicativo móvel para telemedicina com consultas online e gerenciamento de prontuários.',
-      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=800&q=80',
       tech: ['React Native', 'Firebase', 'WebRTC', 'Redux'],
       category: 'Mobile Development'
     },
     {
       title: 'FinTech Dashboard',
       description: 'Dashboard analítico para empresa fintech com relatórios em tempo real e gestão de transações.',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
       tech: ['Vue.js', 'D3.js', 'Python', 'MongoDB'],
       category: 'Data Visualization'
     },
     {
       title: 'IoT Management System',
       description: 'Sistema de gerenciamento para dispositivos IoT com monitoramento em tempo real.',
-      image: 'https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80',
       tech: ['Next.js', 'MQTT', 'InfluxDB', 'Docker'],
       category: 'IoT Solutions'
     },
     {
       title: 'EdTech Platform',
       description: 'Plataforma educacional com cursos online, gamificação e sistema de avaliações.',
-      image: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80',
       tech: ['Angular', 'Laravel', 'MySQL', 'AWS'],
       category: 'Education Technology'
     },
     {
       title: 'Logistics Optimization',
       description: 'Sistema de otimização de rotas e gestão logística para empresa de transporte.',
-      image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=800&q=80',
       tech: ['Python', 'Machine Learning', 'Google Maps API', 'Redis'],
       category: 'Logistics & AI'
     }

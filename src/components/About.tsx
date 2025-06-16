@@ -14,25 +14,25 @@ const About = () => {
     {
       name: 'Ana Silva',
       role: 'Tech Lead & Co-founder',
-      image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=300&q=80',
+      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80',
       skills: ['React', 'Node.js', 'AWS', 'Team Leadership']
     },
     {
       name: 'Carlos Santos',
       role: 'Full Stack Developer',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=300&q=80',
+      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80',
       skills: ['Python', 'Django', 'PostgreSQL', 'Docker']
     },
     {
       name: 'Maria Costa',
       role: 'Mobile Developer',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=300&q=80',
+      image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80',
       skills: ['React Native', 'Flutter', 'iOS', 'Android']
     },
     {
       name: 'João Oliveira',
       role: 'DevOps Engineer',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80',
+      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=300&q=80',
       skills: ['Kubernetes', 'CI/CD', 'Monitoring', 'Security']
     }
   ];
@@ -78,7 +78,7 @@ const About = () => {
             </div>
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80" 
+                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80" 
                 alt="Team collaboration"
                 className="rounded-lg"
               />
