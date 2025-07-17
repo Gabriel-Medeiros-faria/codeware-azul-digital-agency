@@ -43,7 +43,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-slate-800">
+    <section id="services" className="py-20" style={{ backgroundColor: 'hsl(var(--nova-darker))' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -58,11 +58,24 @@ const Services = () => {
           {services.map((service, index) => (
             <div 
               key={index}
-              className="bg-slate-900/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105 group"
+              className="backdrop-blur-sm border rounded-lg p-6 transition-all duration-300 transform hover:scale-105 group"
+              style={{ 
+                backgroundColor: 'hsla(var(--nova-dark), 0.5)', 
+                borderColor: 'hsla(var(--nova-purple), 0.3)' 
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.borderColor = 'hsla(var(--nova-magenta), 0.5)';
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.borderColor = 'hsla(var(--nova-purple), 0.3)';
+              }}
             >
               <div className="flex items-center space-x-4 mb-4">
-                <div className="p-3 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-lg group-hover:from-cyan-500/30 group-hover:to-blue-500/30 transition-all duration-300">
-                  <service.icon className="h-6 w-6 text-cyan-400" />
+                <div className="p-3 rounded-lg group-hover:scale-105 transition-all duration-300"
+                     style={{ 
+                       background: `linear-gradient(135deg, hsla(var(--nova-purple), 0.2), hsla(var(--nova-magenta), 0.2))` 
+                     }}>
+                  <service.icon className="h-6 w-6" style={{ color: 'hsl(var(--nova-magenta))' }} />
                 </div>
                 <h3 className="text-xl font-semibold text-white">{service.title}</h3>
               </div>
@@ -73,7 +86,11 @@ const Services = () => {
                 {service.tech.map((tech, techIndex) => (
                   <span 
                     key={techIndex}
-                    className="px-2 py-1 bg-slate-700/50 text-cyan-400 text-xs rounded-md font-mono"
+                    className="px-2 py-1 text-xs rounded-md font-mono"
+                    style={{ 
+                      backgroundColor: 'hsla(var(--nova-purple), 0.2)', 
+                      color: 'hsl(var(--nova-magenta))' 
+                    }}
                   >
                     {tech}
                   </span>

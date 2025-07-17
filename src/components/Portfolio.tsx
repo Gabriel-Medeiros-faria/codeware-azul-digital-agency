@@ -49,7 +49,7 @@ const Portfolio = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-20 bg-slate-900">
+    <section id="portfolio" className="py-20" style={{ backgroundColor: 'hsl(var(--nova-dark))' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -64,7 +64,17 @@ const Portfolio = () => {
           {projects.map((project, index) => (
             <div 
               key={index}
-              className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg overflow-hidden hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105 group"
+              className="backdrop-blur-sm border rounded-lg overflow-hidden transition-all duration-300 transform hover:scale-105 group"
+              style={{ 
+                backgroundColor: 'hsla(var(--nova-darker), 0.5)', 
+                borderColor: 'hsla(var(--nova-purple), 0.3)' 
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.borderColor = 'hsla(var(--nova-magenta), 0.5)';
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.borderColor = 'hsla(var(--nova-purple), 0.3)';
+              }}
             >
               <div className="relative overflow-hidden">
                 <img 
@@ -72,12 +82,19 @@ const Portfolio = () => {
                   alt={project.title}
                   className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4"
+                     style={{ 
+                       background: `linear-gradient(to top, hsla(var(--nova-dark), 0.8), transparent)` 
+                     }}>
                   <div className="flex space-x-3">
-                    <button className="p-2 bg-cyan-500 hover:bg-cyan-600 rounded-full text-white transition-colors duration-300">
+                    <button className="p-2 rounded-full text-white transition-colors duration-300"
+                            style={{ 
+                              background: `linear-gradient(135deg, hsl(var(--nova-purple)), hsl(var(--nova-magenta)))` 
+                            }}>
                       <ExternalLink className="h-4 w-4" />
                     </button>
-                    <button className="p-2 bg-slate-700 hover:bg-slate-600 rounded-full text-white transition-colors duration-300">
+                    <button className="p-2 rounded-full text-white transition-colors duration-300"
+                            style={{ backgroundColor: 'hsl(var(--nova-dark))' }}>
                       <Github className="h-4 w-4" />
                     </button>
                   </div>
@@ -87,7 +104,11 @@ const Portfolio = () => {
               <div className="p-6">
                 <div className="flex items-center justify-between mb-2">
                   <h3 className="text-xl font-semibold text-white">{project.title}</h3>
-                  <span className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-md">
+                  <span className="px-2 py-1 text-xs rounded-md"
+                        style={{ 
+                          backgroundColor: 'hsla(var(--nova-purple), 0.2)', 
+                          color: 'hsl(var(--nova-magenta))' 
+                        }}>
                     {project.category}
                   </span>
                 </div>
@@ -98,7 +119,8 @@ const Portfolio = () => {
                   {project.tech.map((tech, techIndex) => (
                     <span 
                       key={techIndex}
-                      className="px-2 py-1 bg-slate-700/50 text-slate-300 text-xs rounded-md font-mono"
+                      className="px-2 py-1 text-slate-300 text-xs rounded-md font-mono"
+                      style={{ backgroundColor: 'hsla(var(--nova-purple), 0.2)' }}
                     >
                       {tech}
                     </span>

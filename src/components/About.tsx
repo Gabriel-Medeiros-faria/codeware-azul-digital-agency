@@ -38,11 +38,11 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-slate-800">
+    <section id="about" className="py-20" style={{ backgroundColor: 'hsl(var(--nova-darker))' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Sobre a CodeWare
+            Sobre a NovaWare
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
             Somos uma equipe apaixonada por tecnologia, dedicada a criar soluções digitais inovadoras que transformam negócios
@@ -54,8 +54,11 @@ const About = () => {
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
               <div className="flex justify-center mb-4">
-                <div className="p-4 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-lg">
-                  <stat.icon className="h-8 w-8 text-cyan-400" />
+                <div className="p-4 rounded-lg"
+                     style={{ 
+                       background: `linear-gradient(135deg, hsla(var(--nova-purple), 0.2), hsla(var(--nova-magenta), 0.2))` 
+                     }}>
+                  <stat.icon className="h-8 w-8" style={{ color: 'hsl(var(--nova-magenta))' }} />
                 </div>
               </div>
               <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
@@ -65,7 +68,11 @@ const About = () => {
         </div>
 
         {/* Mission */}
-        <div className="bg-slate-900/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8 mb-16">
+        <div className="backdrop-blur-sm border rounded-lg p-8 mb-16"
+             style={{ 
+               backgroundColor: 'hsla(var(--nova-dark), 0.5)', 
+               borderColor: 'hsla(var(--nova-purple), 0.3)' 
+             }}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="text-2xl font-bold text-white mb-4">Nossa Missão</h3>
@@ -82,7 +89,10 @@ const About = () => {
                 alt="Team collaboration"
                 className="rounded-lg"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-lg"></div>
+              <div className="absolute inset-0 rounded-lg"
+                   style={{ 
+                     background: `linear-gradient(135deg, hsla(var(--nova-purple), 0.2), hsla(var(--nova-magenta), 0.2))` 
+                   }}></div>
             </div>
           </div>
         </div>
@@ -94,7 +104,17 @@ const About = () => {
             {team.map((member, index) => (
               <div 
                 key={index}
-                className="bg-slate-900/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6 text-center hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105"
+                className="backdrop-blur-sm border rounded-lg p-6 text-center transition-all duration-300 transform hover:scale-105"
+                style={{ 
+                  backgroundColor: 'hsla(var(--nova-dark), 0.5)', 
+                  borderColor: 'hsla(var(--nova-purple), 0.3)' 
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.borderColor = 'hsla(var(--nova-magenta), 0.5)';
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.borderColor = 'hsla(var(--nova-purple), 0.3)';
+                }}
               >
                 <img 
                   src={member.image} 
@@ -102,12 +122,13 @@ const About = () => {
                   className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
                 />
                 <h4 className="text-xl font-semibold text-white mb-2">{member.name}</h4>
-                <p className="text-cyan-400 mb-4">{member.role}</p>
+                <p className="mb-4" style={{ color: 'hsl(var(--nova-magenta))' }}>{member.role}</p>
                 <div className="flex flex-wrap gap-1 justify-center">
                   {member.skills.map((skill, skillIndex) => (
                     <span 
                       key={skillIndex}
-                      className="px-2 py-1 bg-slate-700/50 text-slate-300 text-xs rounded-md"
+                      className="px-2 py-1 text-slate-300 text-xs rounded-md"
+                      style={{ backgroundColor: 'hsla(var(--nova-purple), 0.2)' }}
                     >
                       {skill}
                     </span>

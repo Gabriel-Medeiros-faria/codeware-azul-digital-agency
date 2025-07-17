@@ -10,7 +10,7 @@ import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-slate-900">
+    <div className="min-h-screen" style={{ background: 'hsl(var(--nova-dark))' }}>
       <Navbar />
       <Hero />
       <Services />
