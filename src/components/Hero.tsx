@@ -104,12 +104,12 @@ const Hero = () => {
           <button className="border text-slate-300 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
                   style={{ borderColor: 'hsl(var(--nova-purple))' }}
                   onMouseEnter={(e) => {
-                    e.target.style.borderColor = 'hsl(var(--nova-magenta))';
-                    e.target.style.color = 'hsl(var(--nova-magenta))';
+                    (e.currentTarget as HTMLElement).style.borderColor = 'hsl(var(--nova-magenta))';
+                    (e.currentTarget as HTMLElement).style.color = 'hsl(var(--nova-magenta))';
                   }}
                   onMouseLeave={(e) => {
-                    e.target.style.borderColor = 'hsl(var(--nova-purple))';
-                    e.target.style.color = '';
+                    (e.currentTarget as HTMLElement).style.borderColor = 'hsl(var(--nova-purple))';
+                    (e.currentTarget as HTMLElement).style.color = '';
                   }}>
             Ver Portfolio
           </button>

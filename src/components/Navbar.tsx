@@ -21,25 +21,23 @@ const Navbar = () => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               <a href="#home" className="text-slate-300 transition-colors duration-300" 
-                 style={{ '&:hover': { color: 'hsl(var(--nova-magenta))' } }}
-                 onMouseEnter={(e) => e.target.style.color = 'hsl(var(--nova-magenta))'}
-                 onMouseLeave={(e) => e.target.style.color = ''}>Início</a>
+                 onMouseEnter={(e) => (e.currentTarget as HTMLElement).style.color = 'hsl(var(--nova-magenta))'}
+                 onMouseLeave={(e) => (e.currentTarget as HTMLElement).style.color = ''}>Início</a>
               <a href="#services" className="text-slate-300 transition-colors duration-300"
-                 onMouseEnter={(e) => e.target.style.color = 'hsl(var(--nova-magenta))'}
-                 onMouseLeave={(e) => e.target.style.color = ''}>Serviços</a>
+                 onMouseEnter={(e) => (e.currentTarget as HTMLElement).style.color = 'hsl(var(--nova-magenta))'}
+                 onMouseLeave={(e) => (e.currentTarget as HTMLElement).style.color = ''}>Serviços</a>
               <a href="#portfolio" className="text-slate-300 transition-colors duration-300"
-                 onMouseEnter={(e) => e.target.style.color = 'hsl(var(--nova-magenta))'}
-                 onMouseLeave={(e) => e.target.style.color = ''}>Portfolio</a>
+                 onMouseEnter={(e) => (e.currentTarget as HTMLElement).style.color = 'hsl(var(--nova-magenta))'}
+                 onMouseLeave={(e) => (e.currentTarget as HTMLElement).style.color = ''}>Portfolio</a>
               <a href="#about" className="text-slate-300 transition-colors duration-300"
-                 onMouseEnter={(e) => e.target.style.color = 'hsl(var(--nova-magenta))'}
-                 onMouseLeave={(e) => e.target.style.color = ''}>Sobre</a>
+                 onMouseEnter={(e) => (e.currentTarget as HTMLElement).style.color = 'hsl(var(--nova-magenta))'}
+                 onMouseLeave={(e) => (e.currentTarget as HTMLElement).style.color = ''}>Sobre</a>
               <a href="#contact" className="text-white px-4 py-2 rounded-lg transition-all duration-300"
                  style={{ 
-                   background: 'linear-gradient(135deg, hsl(var(--nova-purple)), hsl(var(--nova-magenta)))',
-                   '&:hover': { transform: 'scale(1.05)' }
+                   background: 'linear-gradient(135deg, hsl(var(--nova-purple)), hsl(var(--nova-magenta)))'
                  }}
-                 onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
-                 onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}>Contato</a>
+                 onMouseEnter={(e) => (e.currentTarget as HTMLElement).style.transform = 'scale(1.05)'}
+                 onMouseLeave={(e) => (e.currentTarget as HTMLElement).style.transform = 'scale(1)'}>Contato</a>
             </div>
           </div>
           
@@ -58,20 +56,20 @@ const Navbar = () => {
         <div className="md:hidden" style={{ backgroundColor: 'hsl(var(--nova-darker))' }}>
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <a href="#home" className="block text-slate-300 px-3 py-2"
-               onMouseEnter={(e) => e.target.style.color = 'hsl(var(--nova-magenta))'}
-               onMouseLeave={(e) => e.target.style.color = ''}>Início</a>
+               onMouseEnter={(e) => (e.currentTarget as HTMLElement).style.color = 'hsl(var(--nova-magenta))'}
+               onMouseLeave={(e) => (e.currentTarget as HTMLElement).style.color = ''}>Início</a>
             <a href="#services" className="block text-slate-300 px-3 py-2"
-               onMouseEnter={(e) => e.target.style.color = 'hsl(var(--nova-magenta))'}
-               onMouseLeave={(e) => e.target.style.color = ''}>Serviços</a>
+               onMouseEnter={(e) => (e.currentTarget as HTMLElement).style.color = 'hsl(var(--nova-magenta))'}
+               onMouseLeave={(e) => (e.currentTarget as HTMLElement).style.color = ''}>Serviços</a>
             <a href="#portfolio" className="block text-slate-300 px-3 py-2"
-               onMouseEnter={(e) => e.target.style.color = 'hsl(var(--nova-magenta))'}
-               onMouseLeave={(e) => e.target.style.color = ''}>Portfolio</a>
+               onMouseEnter={(e) => (e.currentTarget as HTMLElement).style.color = 'hsl(var(--nova-magenta))'}
+               onMouseLeave={(e) => (e.currentTarget as HTMLElement).style.color = ''}>Portfolio</a>
             <a href="#about" className="block text-slate-300 px-3 py-2"
-               onMouseEnter={(e) => e.target.style.color = 'hsl(var(--nova-magenta))'}
-               onMouseLeave={(e) => e.target.style.color = ''}>Sobre</a>
+               onMouseEnter={(e) => (e.currentTarget as HTMLElement).style.color = 'hsl(var(--nova-magenta))'}
+               onMouseLeave={(e) => (e.currentTarget as HTMLElement).style.color = ''}>Sobre</a>
             <a href="#contact" className="block text-slate-300 px-3 py-2"
-               onMouseEnter={(e) => e.target.style.color = 'hsl(var(--nova-magenta))'}
-               onMouseLeave={(e) => e.target.style.color = ''}>Contato</a>
+               onMouseEnter={(e) => (e.currentTarget as HTMLElement).style.color = 'hsl(var(--nova-magenta))'}
+               onMouseLeave={(e) => (e.currentTarget as HTMLElement).style.color = ''}>Contato</a>
           </div>
         </div>
       )}

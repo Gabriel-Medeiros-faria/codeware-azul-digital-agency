@@ -70,10 +70,10 @@ const Portfolio = () => {
                 borderColor: 'hsla(var(--nova-purple), 0.3)' 
               }}
               onMouseEnter={(e) => {
-                e.target.style.borderColor = 'hsla(var(--nova-magenta), 0.5)';
+                (e.currentTarget as HTMLElement).style.borderColor = 'hsla(var(--nova-magenta), 0.5)';
               }}
               onMouseLeave={(e) => {
-                e.target.style.borderColor = 'hsla(var(--nova-purple), 0.3)';
+                (e.currentTarget as HTMLElement).style.borderColor = 'hsla(var(--nova-purple), 0.3)';
               }}
             >
               <div className="relative overflow-hidden">
