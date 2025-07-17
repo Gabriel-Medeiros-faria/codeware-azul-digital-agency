@@ -36,7 +36,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-slate-900">
+    <section id="contact" className="py-20" style={{ backgroundColor: 'hsl(var(--nova-darker))' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -54,18 +54,26 @@ const Contact = () => {
             
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
-                <div className="p-3 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-lg">
-                  <Mail className="h-6 w-6 text-cyan-400" />
+                <div className="p-3 rounded-lg"
+                     style={{ 
+                       background: `linear-gradient(135deg, hsla(var(--nova-purple), 0.3), hsla(var(--nova-magenta), 0.3))`,
+                       border: '1px solid hsla(var(--nova-purple), 0.5)'
+                     }}>
+                  <Mail className="h-6 w-6" style={{ color: 'hsl(var(--nova-magenta))' }} />
                 </div>
                 <div>
                   <h4 className="text-white font-semibold">Email</h4>
-                  <p className="text-slate-300">contato@codeware.dev</p>
+                  <p className="text-slate-300">contato@novaware.dev</p>
                 </div>
               </div>
               
               <div className="flex items-center space-x-4">
-                <div className="p-3 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-lg">
-                  <Phone className="h-6 w-6 text-cyan-400" />
+                <div className="p-3 rounded-lg"
+                     style={{ 
+                       background: `linear-gradient(135deg, hsla(var(--nova-purple), 0.3), hsla(var(--nova-magenta), 0.3))`,
+                       border: '1px solid hsla(var(--nova-purple), 0.5)'
+                     }}>
+                  <Phone className="h-6 w-6" style={{ color: 'hsl(var(--nova-magenta))' }} />
                 </div>
                 <div>
                   <h4 className="text-white font-semibold">Telefone</h4>
@@ -74,8 +82,12 @@ const Contact = () => {
               </div>
               
               <div className="flex items-center space-x-4">
-                <div className="p-3 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-lg">
-                  <MapPin className="h-6 w-6 text-cyan-400" />
+                <div className="p-3 rounded-lg"
+                     style={{ 
+                       background: `linear-gradient(135deg, hsla(var(--nova-purple), 0.3), hsla(var(--nova-magenta), 0.3))`,
+                       border: '1px solid hsla(var(--nova-purple), 0.5)'
+                     }}>
+                  <MapPin className="h-6 w-6" style={{ color: 'hsl(var(--nova-magenta))' }} />
                 </div>
                 <div>
                   <h4 className="text-white font-semibold">Localização</h4>
@@ -84,23 +96,27 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="mt-12 p-6 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg">
-              <h4 className="text-white font-semibold mb-4">Por que escolher a CodeWare?</h4>
+            <div className="mt-12 p-6 backdrop-blur-sm border rounded-lg"
+                 style={{ 
+                   backgroundColor: 'hsla(var(--nova-dark), 0.8)', 
+                   borderColor: 'hsl(var(--nova-purple))'
+                 }}>
+              <h4 className="text-white font-semibold mb-4">Por que escolher a NovaWare?</h4>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-400" />
+                  <CheckCircle className="h-5 w-5" style={{ color: 'hsl(var(--nova-magenta))' }} />
                   <span className="text-slate-300">Equipe especializada e experiente</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-400" />
+                  <CheckCircle className="h-5 w-5" style={{ color: 'hsl(var(--nova-magenta))' }} />
                   <span className="text-slate-300">Metodologias ágeis de desenvolvimento</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-400" />
+                  <CheckCircle className="h-5 w-5" style={{ color: 'hsl(var(--nova-magenta))' }} />
                   <span className="text-slate-300">Suporte contínuo pós-entrega</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-400" />
+                  <CheckCircle className="h-5 w-5" style={{ color: 'hsl(var(--nova-magenta))' }} />
                   <span className="text-slate-300">Tecnologias modernas e escaláveis</span>
                 </div>
               </div>
@@ -108,7 +124,11 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8">
+          <div className="backdrop-blur-sm border rounded-lg p-8"
+               style={{ 
+                 backgroundColor: 'hsla(var(--nova-dark), 0.8)', 
+                 borderColor: 'hsl(var(--nova-purple))'
+               }}>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-slate-300 mb-2">
@@ -121,7 +141,20 @@ const Contact = () => {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
+                  className="w-full px-4 py-3 border rounded-lg text-white placeholder-slate-400 transition-all duration-300"
+                  style={{ 
+                    backgroundColor: 'hsla(var(--nova-darker), 0.8)', 
+                    borderColor: 'hsla(var(--nova-purple), 0.5)' 
+                  }}
+                  onFocus={(e) => {
+                    (e.currentTarget as HTMLElement).style.borderColor = 'hsl(var(--nova-magenta))';
+                    (e.currentTarget as HTMLElement).style.outline = 'none';
+                    (e.currentTarget as HTMLElement).style.boxShadow = '0 0 0 2px hsla(var(--nova-magenta), 0.2)';
+                  }}
+                  onBlur={(e) => {
+                    (e.currentTarget as HTMLElement).style.borderColor = 'hsla(var(--nova-purple), 0.5)';
+                    (e.currentTarget as HTMLElement).style.boxShadow = 'none';
+                  }}
                   placeholder="Seu nome completo"
                 />
               </div>
@@ -137,7 +170,20 @@ const Contact = () => {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
+                  className="w-full px-4 py-3 border rounded-lg text-white placeholder-slate-400 transition-all duration-300"
+                  style={{ 
+                    backgroundColor: 'hsla(var(--nova-darker), 0.8)', 
+                    borderColor: 'hsla(var(--nova-purple), 0.5)' 
+                  }}
+                  onFocus={(e) => {
+                    (e.currentTarget as HTMLElement).style.borderColor = 'hsl(var(--nova-magenta))';
+                    (e.currentTarget as HTMLElement).style.outline = 'none';
+                    (e.currentTarget as HTMLElement).style.boxShadow = '0 0 0 2px hsla(var(--nova-magenta), 0.2)';
+                  }}
+                  onBlur={(e) => {
+                    (e.currentTarget as HTMLElement).style.borderColor = 'hsla(var(--nova-purple), 0.5)';
+                    (e.currentTarget as HTMLElement).style.boxShadow = 'none';
+                  }}
                   placeholder="seu@email.com"
                 />
               </div>
@@ -152,7 +198,20 @@ const Contact = () => {
                   name="company"
                   value={formData.company}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
+                  className="w-full px-4 py-3 border rounded-lg text-white placeholder-slate-400 transition-all duration-300"
+                  style={{ 
+                    backgroundColor: 'hsla(var(--nova-darker), 0.8)', 
+                    borderColor: 'hsla(var(--nova-purple), 0.5)' 
+                  }}
+                  onFocus={(e) => {
+                    (e.currentTarget as HTMLElement).style.borderColor = 'hsl(var(--nova-magenta))';
+                    (e.currentTarget as HTMLElement).style.outline = 'none';
+                    (e.currentTarget as HTMLElement).style.boxShadow = '0 0 0 2px hsla(var(--nova-magenta), 0.2)';
+                  }}
+                  onBlur={(e) => {
+                    (e.currentTarget as HTMLElement).style.borderColor = 'hsla(var(--nova-purple), 0.5)';
+                    (e.currentTarget as HTMLElement).style.boxShadow = 'none';
+                  }}
                   placeholder="Nome da sua empresa"
                 />
               </div>
@@ -168,7 +227,20 @@ const Contact = () => {
                   required
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300 resize-none"
+                  className="w-full px-4 py-3 border rounded-lg text-white placeholder-slate-400 transition-all duration-300 resize-none"
+                  style={{ 
+                    backgroundColor: 'hsla(var(--nova-darker), 0.8)', 
+                    borderColor: 'hsla(var(--nova-purple), 0.5)' 
+                  }}
+                  onFocus={(e) => {
+                    (e.currentTarget as HTMLElement).style.borderColor = 'hsl(var(--nova-magenta))';
+                    (e.currentTarget as HTMLElement).style.outline = 'none';
+                    (e.currentTarget as HTMLElement).style.boxShadow = '0 0 0 2px hsla(var(--nova-magenta), 0.2)';
+                  }}
+                  onBlur={(e) => {
+                    (e.currentTarget as HTMLElement).style.borderColor = 'hsla(var(--nova-purple), 0.5)';
+                    (e.currentTarget as HTMLElement).style.boxShadow = 'none';
+                  }}
                   placeholder="Conte-nos sobre seu projeto..."
                 />
               </div>
@@ -176,7 +248,10 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 disabled:from-slate-500 disabled:to-slate-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 disabled:scale-100 flex items-center justify-center space-x-2"
+                className="w-full text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 disabled:scale-100 flex items-center justify-center space-x-2"
+                style={{ 
+                  background: `linear-gradient(135deg, hsl(var(--nova-purple)), hsl(var(--nova-magenta)))` 
+                }}
               >
                 {isSubmitting ? (
                   <>

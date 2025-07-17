@@ -24,27 +24,60 @@ const Hero = () => {
       <div className="absolute inset-0">
         <div className="absolute inset-0" 
              style={{ 
-               background: `radial-gradient(circle at 30% 40%, hsla(var(--nova-purple), 0.15), transparent 70%)` 
+               background: `radial-gradient(circle at 30% 40%, hsla(var(--nova-purple), 0.25), transparent 70%)` 
              }}></div>
         <div className="absolute inset-0" 
              style={{ 
-               background: `radial-gradient(circle at 70% 60%, hsla(var(--nova-magenta), 0.15), transparent 70%)` 
+               background: `radial-gradient(circle at 70% 60%, hsla(var(--nova-magenta), 0.25), transparent 70%)` 
              }}></div>
       </div>
       
-      {/* Floating Code Elements */}
+      {/* Floating Code Elements - Made more visible */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 font-mono text-sm animate-pulse"
-             style={{ color: 'hsla(var(--nova-magenta), 0.3)' }}>
+        <div className="absolute top-20 left-10 font-mono text-lg animate-pulse backdrop-blur-sm border rounded-lg p-4"
+             style={{ 
+               color: 'hsl(var(--nova-magenta))', 
+               backgroundColor: 'hsla(var(--nova-darker), 0.8)',
+               borderColor: 'hsla(var(--nova-purple), 0.4)',
+               opacity: '0.8'
+             }}>
           {'{ "innovation": true }'}
         </div>
-        <div className="absolute top-40 right-20 font-mono text-sm animate-pulse delay-1000"
-             style={{ color: 'hsla(var(--nova-blue), 0.3)' }}>
+        <div className="absolute top-40 right-20 font-mono text-lg animate-pulse delay-1000 backdrop-blur-sm border rounded-lg p-4"
+             style={{ 
+               color: 'hsl(var(--nova-blue))', 
+               backgroundColor: 'hsla(var(--nova-darker), 0.8)',
+               borderColor: 'hsla(var(--nova-blue), 0.4)',
+               opacity: '0.8'
+             }}>
           {'function create() { return "amazing"; }'}
         </div>
-        <div className="absolute bottom-40 left-20 font-mono text-sm animate-pulse delay-2000"
-             style={{ color: 'hsla(var(--nova-purple), 0.3)' }}>
+        <div className="absolute bottom-40 left-20 font-mono text-lg animate-pulse delay-2000 backdrop-blur-sm border rounded-lg p-4"
+             style={{ 
+               color: 'hsl(var(--nova-purple))', 
+               backgroundColor: 'hsla(var(--nova-darker), 0.8)',
+               borderColor: 'hsla(var(--nova-purple), 0.4)',
+               opacity: '0.8'
+             }}>
           {'console.log("NovaWare delivers");'}
+        </div>
+        <div className="absolute top-60 left-1/2 transform -translate-x-1/2 font-mono text-lg animate-pulse delay-3000 backdrop-blur-sm border rounded-lg p-4"
+             style={{ 
+               color: 'hsl(var(--nova-magenta))', 
+               backgroundColor: 'hsla(var(--nova-darker), 0.8)',
+               borderColor: 'hsla(var(--nova-magenta), 0.4)',
+               opacity: '0.8'
+             }}>
+          {'const future = await NovaWare.build();'}
+        </div>
+        <div className="absolute bottom-20 right-10 font-mono text-lg animate-pulse delay-4000 backdrop-blur-sm border rounded-lg p-4"
+             style={{ 
+               color: 'hsl(var(--nova-blue))', 
+               backgroundColor: 'hsla(var(--nova-darker), 0.8)',
+               borderColor: 'hsla(var(--nova-blue), 0.4)',
+               opacity: '0.8'
+             }}>
+          {'deploy("success");'}
         </div>
       </div>
 

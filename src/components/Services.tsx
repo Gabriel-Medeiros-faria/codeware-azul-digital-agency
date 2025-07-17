@@ -58,38 +58,43 @@ const Services = () => {
           {services.map((service, index) => (
             <div 
               key={index}
-              className="backdrop-blur-sm border rounded-lg p-6 transition-all duration-300 transform hover:scale-105 group"
+              className="backdrop-blur-sm border-2 rounded-lg p-8 transition-all duration-300 transform hover:scale-105 group shadow-lg"
               style={{ 
-                backgroundColor: 'hsla(var(--nova-dark), 0.5)', 
-                borderColor: 'hsla(var(--nova-purple), 0.3)' 
+                backgroundColor: 'hsla(var(--nova-dark), 0.8)', 
+                borderColor: 'hsl(var(--nova-purple))',
+                boxShadow: '0 8px 32px hsla(var(--nova-purple), 0.1)'
               }}
               onMouseEnter={(e) => {
-                (e.currentTarget as HTMLElement).style.borderColor = 'hsla(var(--nova-magenta), 0.5)';
+                (e.currentTarget as HTMLElement).style.borderColor = 'hsl(var(--nova-magenta))';
+                (e.currentTarget as HTMLElement).style.boxShadow = '0 12px 40px hsla(var(--nova-magenta), 0.2)';
               }}
               onMouseLeave={(e) => {
-                (e.currentTarget as HTMLElement).style.borderColor = 'hsla(var(--nova-purple), 0.3)';
+                (e.currentTarget as HTMLElement).style.borderColor = 'hsl(var(--nova-purple))';
+                (e.currentTarget as HTMLElement).style.boxShadow = '0 8px 32px hsla(var(--nova-purple), 0.1)';
               }}
             >
-              <div className="flex items-center space-x-4 mb-4">
-                <div className="p-3 rounded-lg group-hover:scale-105 transition-all duration-300"
+              <div className="flex items-center space-x-4 mb-6">
+                <div className="p-4 rounded-lg group-hover:scale-105 transition-all duration-300"
                      style={{ 
-                       background: `linear-gradient(135deg, hsla(var(--nova-purple), 0.2), hsla(var(--nova-magenta), 0.2))` 
+                       background: `linear-gradient(135deg, hsla(var(--nova-purple), 0.3), hsla(var(--nova-magenta), 0.3))`,
+                       border: '1px solid hsla(var(--nova-purple), 0.5)'
                      }}>
-                  <service.icon className="h-6 w-6" style={{ color: 'hsl(var(--nova-magenta))' }} />
+                  <service.icon className="h-8 w-8" style={{ color: 'hsl(var(--nova-magenta))' }} />
                 </div>
                 <h3 className="text-xl font-semibold text-white">{service.title}</h3>
               </div>
               
-              <p className="text-slate-300 mb-4">{service.description}</p>
+              <p className="text-slate-300 mb-6 leading-relaxed">{service.description}</p>
               
               <div className="flex flex-wrap gap-2">
                 {service.tech.map((tech, techIndex) => (
                   <span 
                     key={techIndex}
-                    className="px-2 py-1 text-xs rounded-md font-mono"
+                    className="px-3 py-1 text-sm rounded-md font-mono border"
                     style={{ 
-                      backgroundColor: 'hsla(var(--nova-purple), 0.2)', 
-                      color: 'hsl(var(--nova-magenta))' 
+                      backgroundColor: 'hsla(var(--nova-purple), 0.3)', 
+                      color: 'hsl(var(--nova-magenta))',
+                      borderColor: 'hsla(var(--nova-purple), 0.5)'
                     }}
                   >
                     {tech}
